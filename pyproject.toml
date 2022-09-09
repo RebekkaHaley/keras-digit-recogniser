@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "keras-digit-recogniser"
+version = "0.1.0"
+description = ""
+authors = ["Rebekka Haley <rebekka.haley@gmail.com>"]
+readme = "README.md"
+packages = [{include = "keras_digit_recogniser"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+keras = "^2.10.0"
+numpy = "^1.23.2"
+pandas = "^1.4.4"
+matplotlib = "^3.5.3"
+tensorflow = "^2.10.0"
+scikit-learn = "^1.1.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
