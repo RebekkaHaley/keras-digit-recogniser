@@ -4,6 +4,6 @@ This repo contains code for creating a submission to the Kaggle competition "Dig
 
 The resulting submission scored approx. 0.97/1.
 
-## NB
+## Accessing the data set
 
 Please note that the train and test CSV files have not been included due to large file size. These files can instead be accessed on the Kaggle website at: [Digit Recognizer/Data](https://www.kaggle.com/competitions/digit-recognizer/data).
