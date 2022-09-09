@@ -1,5 +1,8 @@
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Ignore csv files
+# OS X stuff
+*.DS_Store
+
+# Ignore data files
 *.csv
