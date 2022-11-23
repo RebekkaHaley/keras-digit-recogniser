@@ -225,3 +225,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python,macos,venv
+
+# Ignore data files
+*.csv
