@@ -1,4 +1,4 @@
-"""todo.
+"""Train a Keras NN model to predict digits.
 """
 
 import logging
