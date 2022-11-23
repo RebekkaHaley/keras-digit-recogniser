@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Rebekka Haley <rebekka.haley@gmail.com>"]
 readme = "README.md"
-packages = [{include = "keras_digit_recogniser"}]
+packages = [{include = "model_logic"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
