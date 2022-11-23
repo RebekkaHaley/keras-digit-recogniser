@@ -17,6 +17,7 @@ scikit-learn = "^1.1.2"
 jupyter = "^1.0.0"
 isort = "^5.10.1"
 fastapi = "^0.87.0"
+uvicorn = "^0.20.0"
 
 [build-system]
 requires = ["poetry-core"]
