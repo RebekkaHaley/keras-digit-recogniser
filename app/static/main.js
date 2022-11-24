@@ -11,6 +11,12 @@ ctx.lineWidth = 5
 
 let draw = false
 
+let clearBtn = document.querySelector(".clear")
+clearBtn.addEventListener("click", () => {
+    // Clearning the entire canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+})
+
 // Set draw to true when mouse is pressed
 window.addEventListener("mousedown", (e) => draw = true)
 // Set draw to false when mouse is released
