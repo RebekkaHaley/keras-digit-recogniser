@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 root = Path(__file__).parent.parent
-model_filename = root / 'data/model.pkl'
+model_filename = root / 'app/model.pkl'
 input_filename = root / 'data/test.csv'
 result_filename = root / 'data/result.csv'
 

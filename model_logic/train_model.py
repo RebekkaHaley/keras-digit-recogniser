@@ -13,8 +13,8 @@ from keras.optimizers import RMSprop
 from keras.utils.np_utils import to_categorical
 
 root = Path(__file__).parent.parent
-model_filename = root / 'data/model.pkl'
 train_filename = root / 'data/train.csv'
+model_filename = root / 'app/model.pkl'
 
 logger = logging.getLogger('train_model')
 
