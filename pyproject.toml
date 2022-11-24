@@ -18,6 +18,7 @@ jupyter = "^1.0.0"
 isort = "^5.10.1"
 fastapi = "^0.87.0"
 uvicorn = "^0.20.0"
+pydantic = "^1.10.2"
 
 [build-system]
 requires = ["poetry-core"]
