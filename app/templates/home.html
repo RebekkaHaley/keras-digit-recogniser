@@ -11,15 +11,14 @@
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
+
     <nav class="navbar text-light bg-info">
         <div class="mx-auto">
-            <h1 style="font-family: arial">Keras Digit Recogniser</h1>
             <button class="clear">clear</button>
             <button class="predict">predict</button>
         </div>
     </nav>
-
-    <canvas id="canvas"></canvas>
 
     <script src="{{ url_for('static', path='/main.js') }}"></script>
 </body>
