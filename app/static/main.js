@@ -4,10 +4,6 @@ const context = canvas.getContext("2d")
 // Start with black background
 context.fillStyle = "black"
 context.fillRect(0, 0, canvas.width, canvas.height)
-// Update draw tool to white
-context.fillStyle = "white"
-context.lineWidth = 15
-context.lineCap = "round"
 
 let prevX = null
 let prevY = null
@@ -38,6 +34,11 @@ window.addEventListener("mousemove", (e) => {
         prevY = e.clientY
         return
     }
+    // If draw is true then draw
+    context.fillStyle = "white"
+    context.strokeStyle = "white"
+    context.lineWidth = 15
+    context.lineCap = "round"
 
     let currentX = e.clientX
     let currentY = e.clientY
