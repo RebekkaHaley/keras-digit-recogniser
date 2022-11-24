@@ -10,17 +10,17 @@ let prevX = null
 let prevY = null
 let draw = false
 
-let clearBtn = document.querySelector(".clear")
+// Clean the entire canvas
+const clearBtn = document.querySelector("#clear");
 clearBtn.addEventListener("click", () => {
-    // Clearning the entire canvas
     context.clearRect(0, 0, canvas.width, canvas.height)
-})
+});
 
-let predictBtn = document.querySelector(".predict")
-predictBtn.addEventListener("click", () => {
-    // Send canvas image to prediction model
-    document.getElementById('canvasimg').value = canvas.toDataURL()
-})
+// Post canvas image to prediction model
+const canvastoimage = () => {
+    const canvas = document.querySelector('#canvas');
+    document.getElementById('canvasimg').value = canvas.toDataURL();
+};
 
 // Set draw to true when mouse is pressed
 window.addEventListener("mousedown", (e) => draw = true)
@@ -45,4 +45,4 @@ window.addEventListener("mousemove", (e) => {
 
     prevX = currentX
     prevY = currentY
-})
+});
