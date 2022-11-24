@@ -1,10 +1,13 @@
 const canvas = document.getElementById("canvas")
-canvas.height = 280
-canvas.width = 280
 
 const context = canvas.getContext("2d")
+// Start with black background
+context.fillStyle = "black"
+context.fillRect(0, 0, canvas.width, canvas.height)
+// Update draw tool to white
+context.fillStyle = "white"
 context.lineWidth = 15
-context.lineCap = 'round'
+context.lineCap = "round"
 
 let prevX = null
 let prevY = null
@@ -13,13 +16,14 @@ let draw = false
 // Clean the entire canvas
 let clearBtn = document.querySelector("#clear")
 clearBtn.addEventListener("click", () => {
-    context.clearRect(0, 0, canvas.width, canvas.height)
+    context.fillStyle = "black"
+    context.fillRect(0, 0, canvas.width, canvas.height)
 });
 
 // Post canvas image to prediction model
 const canvastoimage = () => {
-    const canvas = document.querySelector('#canvas');
-    document.getElementById('canvasimg').value = canvas.toDataURL();
+    const canvas = document.querySelector("#canvas");
+    document.getElementById("canvasimg").value = canvas.toDataURL();
 };
 
 // Set draw to true when mouse is pressed
