@@ -2,12 +2,3 @@
     margin: 0;
     padding: 0;
 }
-.tools {
-    width: 280px;
-}
-
-.tools button {
-    border: 2px solid black;
-    width: 95px;
-    border-radius: 0px;
-}
