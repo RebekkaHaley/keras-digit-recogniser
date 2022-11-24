@@ -11,7 +11,7 @@ let prevY = null
 let draw = false
 
 // Clean the entire canvas
-const clearBtn = document.querySelector("#clear");
+let clearBtn = document.querySelector("#clear")
 clearBtn.addEventListener("click", () => {
     context.clearRect(0, 0, canvas.width, canvas.height)
 });
