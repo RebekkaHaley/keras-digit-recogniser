@@ -4,7 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Rebekka Haley <rebekka.haley@gmail.com>"]
 readme = "README.md"
-packages = [{include = "model_logic"}]
+packages = [
+    { include = "app" },
+    { include = "model_logic" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
@@ -18,8 +21,6 @@ jupyter = "^1.0.0"
 isort = "^5.10.1"
 fastapi = "^0.87.0"
 uvicorn = "^0.20.0"
-pydantic = "^1.10.2"
-opencv-python = "^4.6.0.66"
 python-multipart = "^0.0.5"
 
 [build-system]
