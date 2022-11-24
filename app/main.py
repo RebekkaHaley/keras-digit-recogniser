@@ -1,4 +1,4 @@
-"""todo.
+"""Defines application routes.
 """
 
 import base64
