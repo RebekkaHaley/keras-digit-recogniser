@@ -9,14 +9,22 @@ let prevX = null
 let prevY = null
 let draw = false
 
-// Clean the entire canvas
+// Cleans entire canvas
 let clearBtn = document.querySelector("#clear")
 clearBtn.addEventListener("click", () => {
     context.fillStyle = "black"
     context.fillRect(0, 0, canvas.width, canvas.height)
 });
 
-// Post canvas image to prediction model
+// Opens current canvas in new tab
+let newTab = document.querySelector("#save")
+newTab.addEventListener("click", () => {
+    const dataUrl = canvas.toDataURL("png");
+    console.log(dataUrl);
+    window.open(dataUrl, '_blank');
+});
+
+// Posts canvas image to prediction model
 const canvastoimage = () => {
     const canvas = document.querySelector("#canvas");
     document.getElementById("canvasimg").value = canvas.toDataURL();
