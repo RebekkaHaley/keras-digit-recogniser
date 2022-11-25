@@ -10,6 +10,7 @@ import numpy as np
 from fastapi import FastAPI, Form, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
 from PIL import Image
 
 # Initialize app
@@ -19,20 +20,27 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
-# Load prebuilt model
+# Load ML model
 model_filename = Path.cwd() / 'model.pkl'
 model = pickle.load(open(model_filename, 'rb'))
+
+
+# Models
+class PredictionOut(BaseModel):
+    digit: str
+
 
 # Handle GET request
 @app.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
 
+
 # Handle POST request
-@app.post("/")
-async def canvas(canvasimg=Form()):
+@app.post("/", response_model=PredictionOut)
+async def predict(uri=Form()):
     # Recieve base64 data from the user form
-    image_data = canvasimg.split(',')[1]
+    image_data = uri.split(',')[1]
 
     # Decode base64 image to python array
     image_data = base64.b64decode(image_data)
@@ -46,5 +54,5 @@ async def canvas(canvasimg=Form()):
     reshaped_image = image2arr.reshape(1, 28*28)
 
     # Run prediction
-    prediction = np.argmax(model.predict(reshaped_image))
-    return {"Prediction": f"{prediction}"}
+    digit = np.argmax(model.predict(reshaped_image))
+    return {"digit": f"{digit}"}

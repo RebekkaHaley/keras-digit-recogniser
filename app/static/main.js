@@ -27,7 +27,7 @@ newTab.addEventListener("click", () => {
 // Posts canvas image to prediction model
 const canvastoimage = () => {
     const canvas = document.querySelector("#canvas");
-    document.getElementById("canvasimg").value = canvas.toDataURL();
+    document.getElementById("uri").value = canvas.toDataURL();
 };
 
 // Set draw to true when mouse is pressed

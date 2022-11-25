@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Keras Digit Recogniser</title>
@@ -12,7 +12,7 @@
 
 <body>
     <form action="/" method="POST" onsubmit="canvastoimage()">
-        <input type="hidden" id="canvasimg" name="canvasimg">
+        <input type="hidden" id="uri" name="uri">
         <canvas id="canvas" width=280 height=280></canvas>
 
         <div class="mx-auto">
@@ -23,6 +23,12 @@
     <div class="mx-auto">
         <button class="btn btn-warning" id="save">Save to New Tab</button>
         <button class="btn btn-warning" id="clear">Clear Canvas</button>
+    </div>
+
+
+    <div class="mx-auto">
+        <h2>Prediction result:
+        </h2>
     </div>
 
     <script src="{{ url_for('static', path='/main.js') }}"></script>
