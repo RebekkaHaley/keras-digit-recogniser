@@ -45,7 +45,7 @@ window.addEventListener("mousemove", (e) => {
     // If draw is true then draw
     context.fillStyle = "white"
     context.strokeStyle = "white"
-    context.lineWidth = 15
+    context.lineWidth = 30
     context.lineCap = "round"
 
     let currentX = e.clientX
