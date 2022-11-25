@@ -25,11 +25,11 @@
         <button class="btn btn-warning" id="clear">Clear Canvas</button>
     </div>
 
-
-    <div class="mx-auto">
-        <h2>Prediction result:
-        </h2>
-    </div>
+    <h2>Prediction result:
+        {% if digit %}
+        <p class="alert alert-success m-4 text-center">{{ digit }}</p>
+        {% endif %}
+    </h2>
 
     <script src="{{ url_for('static', path='/main.js') }}"></script>
 </body>

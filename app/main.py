@@ -1,4 +1,4 @@
-"""Defines application routes.
+"""Define application routes.
 """
 
 import base64
@@ -38,7 +38,7 @@ async def home(request: Request):
 
 # Handle POST request
 @app.post("/", response_model=PredictionOut)
-async def predict(uri=Form()):
+async def predict(request: Request, uri=Form()):
     # Recieve base64 data from the user form
     image_data = uri.split(',')[1]
 
@@ -55,4 +55,4 @@ async def predict(uri=Form()):
 
     # Run prediction
     digit = np.argmax(model.predict(reshaped_image))
-    return {"digit": f"{digit}"}
+    return templates.TemplateResponse("home.html", {"request": request, "digit": f"{digit}"})
