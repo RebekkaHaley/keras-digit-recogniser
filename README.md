@@ -33,4 +33,4 @@ Please note that the train and test CSV files have not been included due to larg
 - [Lets create a Drawing APP with JS](https://dev.to/0shuvo0/lets-create-a-drawing-app-with-js-4ej3)
 - [How To Deploy Digit Recognition Model Into Drawing App](https://medium.com/analytics-vidhya/how-to-deploy-digit-recognition-model-into-drawing-app-6e59f82a199c)
 - [Deploy ML models with FastAPI, Docker, and Heroku](https://www.youtube.com/watch?v=h5wLuVDr0oc&list=WL&index=3)
-- (Jinja2 Templates with FastAPI for Python)[https://www.youtube.com/watch?v=IxXtDOI9RUo]s
+- [Jinja2 Templates with FastAPI for Python](https://www.youtube.com/watch?v=IxXtDOI9RUo)
