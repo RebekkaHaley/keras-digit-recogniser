@@ -51,8 +51,11 @@ async def predict(request: Request, uri=Form()):
 
     # Turn into an array of numbers
     image2arr = np.array(image)
-    reshaped_image = image2arr.reshape(1, 28*28)
+    image2arr = image2arr.reshape(-1,28,28,1)
+
+    # Normalise data
+    image2arr = image2arr / 255.0
 
     # Run prediction
-    digit = np.argmax(model.predict(reshaped_image))
+    digit = np.argmax(model.predict(image2arr))
     return templates.TemplateResponse("home.html", {"request": request, "digit": f"{digit}"})
