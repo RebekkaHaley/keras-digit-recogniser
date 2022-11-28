@@ -6,7 +6,6 @@ authors = ["Rebekka Haley <rebekka.haley@gmail.com>"]
 readme = "README.md"
 packages = [
     { include = "app" },
-    { include = "model_logic" },
 ]
 
 [tool.poetry.dependencies]
