@@ -24,7 +24,7 @@ The folder `/app` contains the app source code.
 
 ## Model Logic
 
-The folder `/model_logic` contains the notebook used to create the CNN model. It also produces a csv in the correct submission format for the Kaggle competition "Digit Recognizer".
+The folder `/model_logic` contains the notebook used to create the CNN model. It also produces a CSV in the correct submission format for the Kaggle competition "Digit Recognizer".
 
 For example, one submission scored approx. 0.97.
 
