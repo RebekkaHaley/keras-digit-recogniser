@@ -16,6 +16,10 @@ If running app without docker:
 
 If running app with docker:
 
+1) `docker build -t keras-digit-recogniser .`.
+
+2) `docker run -p 80:80 keras-digit-recogniser`.
+
 TODO
 
 ## App
