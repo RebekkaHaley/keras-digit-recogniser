@@ -123,20 +123,6 @@ optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 
 [[package]]
-name = "comm"
-version = "0.1.1"
-description = "Jupyter Python Comm implementation, for usage in ipykernel, xeus-python etc."
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-traitlets = ">5.3"
-
-[package.extras]
-test = ["pytest"]
-
-[[package]]
 name = "contourpy"
 version = "1.0.6"
 description = "Python library for calculating contours of 2D quadrilateral grids"
@@ -342,7 +328,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "ipykernel"
-version = "6.18.2"
+version = "6.17.1"
 description = "IPython Kernel for Jupyter"
 category = "dev"
 optional = false
@@ -350,7 +336,6 @@ python-versions = ">=3.8"
 
 [package.dependencies]
 appnope = {version = "*", markers = "platform_system == \"Darwin\""}
-comm = ">=0.1"
 debugpy = ">=1.0"
 ipython = ">=7.23.1"
 jupyter-client = ">=6.1.12"
@@ -363,9 +348,8 @@ tornado = ">=6.1"
 traitlets = ">=5.1.0"
 
 [package.extras]
-cov = ["coverage[toml]", "curio", "matplotlib", "pytest-cov", "trio"]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-alt"]
-test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-asyncio", "pytest-cov", "pytest-timeout"]
+test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-cov", "pytest-timeout"]
 
 [[package]]
 name = "ipython"
@@ -1240,7 +1224,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "a89951d70ae6ad580386f358dc8f9b8f4622bef06be7f5cf28c83e55d1921235"
+content-hash = "f602611d5aab6a0b5ab5ea2661838782efefbd5997db977a01ca35c31351b149"
 
 [metadata.files]
 absl-py = [
@@ -1352,10 +1336,6 @@ click = [
 colorama = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
-]
-comm = [
-    {file = "comm-0.1.1-py3-none-any.whl", hash = "sha256:788a4ec961956c1cb2b0ba3c21f2458ff5757bb2f552032b140787af88d670a3"},
-    {file = "comm-0.1.1.tar.gz", hash = "sha256:f395ea64f4f261f35ffc2fbf80a62ec071375dac48cd3ea56092711e74dd063e"},
 ]
 contourpy = [
     {file = "contourpy-1.0.6-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:613c665529899b5d9fade7e5d1760111a0b011231277a0d36c49f0d3d6914bd6"},
@@ -1571,8 +1551,8 @@ idna = [
     {file = "idna-3.4.tar.gz", hash = "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"},
 ]
 ipykernel = [
-    {file = "ipykernel-6.18.2-py3-none-any.whl", hash = "sha256:4ae64026a3cca0e1843d0fccce6690d7fda2b05267e4609547185797de999823"},
-    {file = "ipykernel-6.18.2.tar.gz", hash = "sha256:53714bb8b2207fda4a9fac645460c38612e04b63be34b4ba70febbebc8cfc4a0"},
+    {file = "ipykernel-6.17.1-py3-none-any.whl", hash = "sha256:3a9a1b2ad6dbbd5879855aabb4557f08e63fa2208bffed897f03070e2bb436f6"},
+    {file = "ipykernel-6.17.1.tar.gz", hash = "sha256:e178c1788399f93a459c241fe07c3b810771c607b1fb064a99d2c5d40c90c5d4"},
 ]
 ipython = [
     {file = "ipython-8.7.0-py3-none-any.whl", hash = "sha256:352042ddcb019f7c04e48171b4dd78e4c4bb67bf97030d170e154aac42b656d9"},
