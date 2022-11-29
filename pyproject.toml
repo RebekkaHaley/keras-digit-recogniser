@@ -12,16 +12,19 @@ packages = [
 python = ">=3.10,<3.11"
 keras = "^2.10.0"
 numpy = "^1.23.2"
-pandas = "^1.4.4"
-matplotlib = "^3.5.3"
 tensorflow = "^2.10.0"
 scikit-learn = "^1.1.2"
-jupyter = "^1.0.0"
-isort = "^5.10.1"
 fastapi = "^0.87.0"
 uvicorn = "^0.20.0"
-python-multipart = "^0.0.5"
 pydantic = "^1.10.2"
+jinja2 = "^3.1.2"
+python-multipart = "^0.0.5"
+
+[tool.poetry.group.dev.dependencies]
+matplotlib = "^3.6.2"
+pandas = "^1.5.2"
+isort = "^5.10.1"
+ipykernel = "^6.18.2"
 
 [build-system]
 requires = ["poetry-core"]
