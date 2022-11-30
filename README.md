@@ -1,6 +1,6 @@
 ## Welcome
 
-This repo contains a FastAPI app that allows users draw then predict digits using a Keras Convolutional Neural Network (CNN).
+This repo contains a FastAPI app that allows users to draw and predict digits using a Keras Convolutional Neural Network (CNN).
 
 ## Setup
 
