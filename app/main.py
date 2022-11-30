@@ -4,24 +4,29 @@
 import base64
 import pickle
 from io import BytesIO
-from pathlib import Path
+from os.path import abspath, join
 
 import numpy as np
 from fastapi import FastAPI, Form, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
 from PIL import Image
+from pydantic import BaseModel
+
+# Paths
+root = abspath("")
+static_filepath = join(root, "app/static/")
+templates_filepath = join(root, "app/templates/")
+model_filename = join(root, "app/model.pkl")
 
 # Initialize app
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory=static_filepath), name="static")
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=templates_filepath)
 
 # Load ML model
-model_filename = Path.cwd() / 'model.pkl'
 model = pickle.load(open(model_filename, 'rb'))
 
 
