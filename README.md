@@ -4,15 +4,13 @@ This repo contains a FastAPI app that allows users draw then predict digits usin
 
 ## Setup
 
-If running app without docker:
+If running app with poetry:
 
 1) `poetry install`.
 
-2) `cd app`.
+2) `poetry run uvicorn app.main:app --reload`.
 
-3) `poetry run uvicorn main:app --reload`.
-
-4) Go to `localhost:8000` in browser.
+3) Go to `localhost:8000` in browser.
 
 If running app with docker:
 
@@ -20,7 +18,7 @@ If running app with docker:
 
 2) `docker run -p 80:80 keras-digit-recogniser`.
 
-TODO
+3) Go to `localhost` in browser.
 
 ## App
 
@@ -43,3 +41,4 @@ Please note that the train and test CSV files have not been included due to larg
 - [Deploy ML models with FastAPI, Docker, and Heroku](https://www.youtube.com/watch?v=h5wLuVDr0oc&list=WL&index=3)
 - [Jinja2 Templates with FastAPI for Python](https://www.youtube.com/watch?v=IxXtDOI9RUo)
 - [Dockerizing Python Poetry Applications](https://medium.com/@harpalsahota/dockerizing-python-poetry-applications-1aa3acb76287)
+- [FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/)
