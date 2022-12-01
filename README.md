@@ -22,7 +22,7 @@ If running app with docker:
 
 ## App
 
-The folder `/app` contains the app source code.
+The folder `/app` contains the source code.
 
 ## Model Logic
 
@@ -42,3 +42,4 @@ Please note that the train and test CSV files have not been included due to larg
 - [Jinja2 Templates with FastAPI for Python](https://www.youtube.com/watch?v=IxXtDOI9RUo)
 - [Dockerizing Python Poetry Applications](https://medium.com/@harpalsahota/dockerizing-python-poetry-applications-1aa3acb76287)
 - [FastAPI in Containers - Docker](https://fastapi.tiangolo.com/deployment/docker/)
+- [Mouse cursor doesn't match with canvas](https://stackoverflow.com/questions/30082590/mouse-cursor-doesnt-match-with-canvas)
