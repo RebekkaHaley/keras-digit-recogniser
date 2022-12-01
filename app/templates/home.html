@@ -20,29 +20,33 @@
         </div>
 
         <div class="row p-2">
-            <div class="col">
-                <form action="/" method="POST" onsubmit="canvastoimage()">
-                    <input type="hidden" id="uri" name="uri">
-                    <button class="btn btn-success" id="predict" type="submit">Predict Class</button>
-                </form>
-            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="p-1">
+                    <form action="/" method="POST" onsubmit="canvastoimage()">
+                        <input type="hidden" id="uri" name="uri">
+                        <button class="btn btn-success" id="predict" type="submit">Predict Class</button>
+                    </form>
+                </div>
 
-            <div class="col">
-                <button class="btn btn-warning" id="save">Open to Tab</button>
-            </div>
+                <div class="p-1">
+                    <button class="btn btn-warning" id="save">Open to Tab</button>
+                </div>
 
-            <div class="col">
-                <button class="btn btn-warning" id="clear">Clear Canvas</button>
+                <div class="p-1">
+                    <button class="btn btn-warning" id="clear">Clear Canvas</button>
+                </div>
             </div>
         </div>
 
         <div class="row p-2">
             <div class="col d-flex justify-content-center">
-                <h2>The number is...</h2>
-            </div>
+                <div class="p-1">
+                    <h2>The number is...</h2>
+                </div>
 
-            <div class="col d-flex justify-content-center">
-                <h2>{% if digit %}{{ digit }}{% endif %}</h2>
+                <div class="p-1">
+                    <h2>{% if digit %}{{ digit }}{% endif %}</h2>
+                </div>
             </div>
         </div>
     </div>
