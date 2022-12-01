@@ -1,0 +1,7 @@
+.container-fluid {
+    background: conic-gradient(at top right, lime, cyan);
+}
+.btn{
+    height:60px;
+    width:125px;
+}
