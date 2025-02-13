@@ -2,9 +2,9 @@
 """
 
 import base64
-import pickle
 from io import BytesIO
 from os.path import abspath, join
+import keras
 
 import numpy as np
 from fastapi import FastAPI, Form, Request
@@ -17,7 +17,7 @@ from pydantic import BaseModel
 root = abspath("")
 static_filepath = join(root, "app/static/")
 templates_filepath = join(root, "app/templates/")
-model_filename = join(root, "app/model.pkl")
+model_filename = join(root, "app/model.keras")
 
 # Initialize app
 app = FastAPI()
@@ -27,8 +27,7 @@ app.mount("/static", StaticFiles(directory=static_filepath), name="static")
 templates = Jinja2Templates(directory=templates_filepath)
 
 # Load ML model
-model = pickle.load(open(model_filename, 'rb'))
-
+model = keras.saving.load_model(model_filename)
 
 # Models
 class PredictionOut(BaseModel):
