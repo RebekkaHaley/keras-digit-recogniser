@@ -4,11 +4,11 @@ This repo contains a FastAPI app that allows users to draw and predict digits us
 
 ## Setup
 
-If running app with poetry:
+If running app with pipenv:
 
-1) `poetry install`.
+1) `pipenv install`.
 
-2) `poetry run uvicorn app.main:app --reload`.
+2) `pipenv run uvicorn app.main:app --reload`.
 
 3) Go to `localhost:8000` in browser.
 

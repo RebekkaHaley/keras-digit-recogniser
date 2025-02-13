@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+keras = "*"
+numpy = "*"
+tensorflow = "*"
+scikit-learn = "*"
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+jinja2 = "*"
+pillow = "*"
+python-multipart = "*"
+notebook = "*"
+
+[dev-packages]
+matplotlib = "*"
+pandas = "*"
+isort = "*"
+ipykernel = "*"
